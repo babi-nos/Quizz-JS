@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.container{
+    background-color: pink;
+    text-align: center;
+    height: 100vh;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    padding: 25px;
+}
+ul li{
+    padding: 20px;
+}
+
+span{
+    padding: 10px 20px;
+    border: 2px solid white;
+    background: rgba(255, 255, 255, 0.196);
+    transition: background 0.7 ease-in-out;
+    cursor: pointer;
+   /* position: absolute;  */
+}
+
+#btn{
+    margin: 50px;
+    padding: 10px 20px;
+}
+
+.active{
+    background: green;
+    color: green;
+}
