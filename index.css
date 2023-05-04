@@ -10,9 +10,10 @@
 
 body {
   height: 100vh;
-  min-height: 450px;
+  min-height: 350px;
   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 }
+
 #title {
   position: absolute;
   font-size: 5em;
@@ -27,72 +28,71 @@ body {
 }
 
 /* CONTAINER-PLAY */
-.container-play{
+.container-play {
   height: 100vh;
   display: grid;
   grid-template-rows: 60% 25%;
 }
-.container-play h1{
+
+.container-play h1 {
   letter-spacing: 5px;
 }
 
 .container-play button {
-	margin: auto;
-	border-radius: 20px;
-	background-color: #667292;
-	box-shadow: 10px 15px 40px #36486b84;
-	width: 250px;
-	height: 80px;
-	font-size: 50px;
-	color: #bccad6;
-	border: none;
+  margin: auto;
+  border-radius: 20px;
+  background-color: #667292;
+  box-shadow: 10px 15px 40px #36486b84;
+  width: 250px;
+  height: 80px;
+  font-size: 50px;
+  color: #bccad6;
+  border: none;
 }
 
 .container-play button:hover {
-	border: none;
-	background-color: #00000000;
-	opacity: 1;
-	color: #36486b;
-  
+  border: none;
+  background-color: #00000000;
+  opacity: 1;
+  color: #36486b;
+
 }
 
 .center {
-	margin: auto;
+  margin: auto;
 }
 
 .btn-play:hover {
-	transition: 0.5s ease-in-out;
-	background: #8d9db6;
+  transition: 0.5s ease-in-out;
+  background: #8d9db6;
   cursor: pointer;
 }
 
 .container-play button {
-	--color1: #36486b;
-	--color2: #bccad6;
+  --color1: #36486b;
+  --color2: #bccad6;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	text-align: center;
-	font-size: 46px;
-	background: repeating-linear-gradient(
-		45deg,
-		var(--color1),
-		var(--color1) 30px,
-		var(--color2) 30px,
-		var(--color2) 60px
-	);
-	background-clip: text;
-	color: transparent;
-	-webkit-background-clip: text;
-	animation: 40s linear 0s infinite move;
+  text-align: center;
+  font-size: 46px;
+  background: repeating-linear-gradient(45deg,
+      var(--color1),
+      var(--color1) 30px,
+      var(--color2) 30px,
+      var(--color2) 60px);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  animation: 40s linear 0s infinite move;
 }
 
 @keyframes move {
-	from {
-		background-position: 0px;
-	}
+  from {
+    background-position: 0px;
+  }
 
-	to {
-		background-position: 1000px;
-	}
+  to {
+    background-position: 1000px;
+  }
 }
 
 /* CONTAINER POUR JOUER */
@@ -226,19 +226,22 @@ h1 {
     margin: 20px !important;
     font-size: 1rem !important;
   }
+
   .btn-play {
     /* padding: 10px 30px !important;
     margin: 20px !important; */
     font-size: 2.5rem !important;
   }
 }
+
 @media (max-width: 568px) {
   #btn {
     padding: 10px 15px !important;
     margin: 10px !important;
     font-size: 1rem !important;
   }
-  h1{
+
+  h1 {
     font-size: 2rem;
     padding: 0 5px;
   }
