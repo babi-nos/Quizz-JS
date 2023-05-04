@@ -105,6 +105,7 @@ function init() {
     });
     init();
   });
+  
   let valeur;
 
   submit.addEventListener("click", (event) => {
