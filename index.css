@@ -10,7 +10,7 @@
 
 body {
   height: 100vh;
-  min-height: 350px;
+  /* min-height: 350px; */
   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 }
 
@@ -44,7 +44,7 @@ body {
   background-color: #667292;
   box-shadow: 10px 15px 40px #36486b84;
   width: 250px;
-  height: 80px;
+  height: 70px;
   font-size: 50px;
   color: #bccad6;
   border: none;
