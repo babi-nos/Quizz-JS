@@ -7,22 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="index.css">
-    <title>Question answer</title>
+    <title>courage</title>
 </head>
 
 <body>
 
     <div class="container">
-        <h1 id="question-form"></h1>
-        <ul id="reponses">
-            <li><span type="radio" id="reponse1"></span></li>
-            <li><span type="radio" id="reponse2"></span></li>
-            <li><span type="radio" id="reponse3"></span></li>
-        </ul>
-        <!-- <button id="btn" type="submit">OK fdp c'est la good rep</button> -->
-    </div>
-    <script src="index.js"></script>
 
+        <h1 id="questionForm"></h1>
+        <div class="btns">
+            <button id="btn" role="button"  class="reponse1"></button>
+            <button id="btn" role="button" class="reponse2"></button>
+            <button id="btn" role="button" class="reponse3"></button>
+        </div>
+            
+        <div class="envoyer">
+            <button id="send">Envoyer</button>
+        </div>
+    </div>
+
+    <div class="container-result">
+        <h1 class="our-score"></h1>
+
+        <div class="replay">
+            <button id="replay-btn">Rejouez</button>
+
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
 </body>
 
 </html>
