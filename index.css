@@ -32,7 +32,7 @@ body {
 .container-play {
   height: 100vh;
   display: grid;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 50% 30%;
 }
 
 .container-play h1 {
@@ -253,10 +253,10 @@ h1 {
   }
 
   .errorr p {
-    padding: 2.5px 15px !important;
-    margin: 0px 25px;
-    font-size: 1rem !important;
-
+    padding: 2px 5px !important;
+    margin: 0px 5px !important;
+    font-size: 0.9rem !important;
+    text-align: left !important;
   }
 }
 
