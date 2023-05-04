@@ -76,8 +76,9 @@ function init() {
   const containerResult = document.querySelector(".container-result"); // le container du result
   const ourScore = document.querySelector(".our-score"); // le score en fin de partie
   const btnReplay = document.getElementById("replay-btn"); //le btn rejouer
+  const errorr = document.querySelector(".errorr"); //le btn rejouer
+  console.log(errorr);
 
-  console.log(ourScore);
   let i = 0;
   let score = 0;
 
@@ -104,8 +105,9 @@ function init() {
     });
     init();
   });
+  let valeur;
 
-  submit.addEventListener("click", () => {
+  submit.addEventListener("click", (event) => {
     if (i === quizz.length - 1) {
       container.style.display = "none";
       containerResult.style.display = "grid";
@@ -133,11 +135,20 @@ function init() {
     send.style.display = "none";
   });
 
-  let valeur;
-
   btn.forEach((btns) => {
     btns.addEventListener("click", (event) => {
       valeur = event.target.textContent;
+      // console.log(quizz[i].bonneReponse);
+      let qstErro = quizz[i].question;
+      // console.log(qstErro);
+
+
+      if (!(valeur == quizz[i].bonneReponse)) {
+        // console.log("cest tjrs pas ca fdp");
+        errorr.innerHTML += `<p> ${qstErro} <span class="red">: Mauvais réponse <p> </span>`;
+      }else if (valeur == quizz[i].bonneReponse){
+        errorr.innerHTML += `<p> ${qstErro} <span class="green">: Bonne réponse <p> </span>`;
+      }
 
       btn.forEach((otherBtn) => {
         if (otherBtn !== btn) {
