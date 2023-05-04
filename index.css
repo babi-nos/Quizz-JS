@@ -100,7 +100,7 @@ body {
 .container {
   height: 100vh;
   display: none;
-  grid-template-rows: 15% 50% 0%;
+  grid-template-rows: 15% 60% 15%;
   align-items: center;
   justify-content: center;
 }
