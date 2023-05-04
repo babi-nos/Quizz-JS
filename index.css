@@ -10,12 +10,102 @@
 
 body {
   height: 100vh;
+  min-height: 700px;
   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 }
+#title {
+  position: absolute;
+  font-size: 5em;
+  background-image: linear-gradient(to right, black, darkgray, gray, lightgray, white);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 2px solid gray;
+  /* border-left: 1px solid black; */
+}
+
+/* CONTAINER-PLAY */
+.container-play{
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 60% 25%;
+}
+.container-play h1{
+  letter-spacing: 5px;
+  /* background-image: linear-gradient(to bottom, black, rgb(0, 0, 0), rgb(183, 182, 182), rgb(0, 0, 0), rgb(6, 6, 6));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent; */
+}
+
+.container-play button {
+	margin: auto;
+	border-radius: 20px;
+	background-color: #667292;
+	box-shadow: 10px 15px 40px #36486b84;
+	width: 250px;
+	height: 80px;
+	font-size: 50px;
+	color: #bccad6;
+	border: none;
+}
+
+.container-play button:hover {
+	border: none;
+	background-color: #00000000;
+	opacity: 1;
+	color: #36486b;
+  
+}
+
+.center {
+	margin: auto;
+}
+
+.btn-play:hover {
+	transition: 0.5s ease-in-out;
+	background: #8d9db6;
+  cursor: pointer;
+}
+
+.container-play button {
+	--color1: #36486b;
+	--color2: #bccad6;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	text-align: center;
+	font-size: 46px;
+	background: repeating-linear-gradient(
+		45deg,
+		var(--color1),
+		var(--color1) 30px,
+		var(--color2) 30px,
+		var(--color2) 60px
+	);
+	background-clip: text;
+	color: transparent;
+	-webkit-background-clip: text;
+	animation: 40s linear 0s infinite move;
+}
+
+@keyframes move {
+	from {
+		background-position: 0px;
+	}
+
+	to {
+		background-position: 1000px;
+	}
+}
+
+/* CONTAINER POUR JOUER */
 
 .container {
   height: 100vh;
-  display: grid;
+  display: none;
   grid-template-rows: 20% 60% 20%;
   align-items: center;
   justify-content: center;
@@ -25,6 +115,9 @@ h1 {
   margin: auto;
   font-family: 'Bebas Neue', cursive;
   letter-spacing: 2px;
+  font-size: 2.5rem;
+  padding: 0 50px;
+  text-align: center;
 }
 
 .btns {
@@ -42,7 +135,10 @@ h1 {
   background-color: #FFFFFF;
   border-radius: 40em;
   border-style: none;
-  box-shadow: #ADCFFF 0 -12px 6px inset;
+  box-shadow: #d8eaf8 0 -12px 6px inset;
+  
+  /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); */
+
   box-sizing: border-box;
   color: #000000;
   cursor: pointer;
@@ -51,7 +147,6 @@ h1 {
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: -.24px;
-  /* margin: 0; */
   outline: none;
   padding: 1.3rem 1.6rem;
   quotes: auto;
@@ -61,7 +156,6 @@ h1 {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  /* padding: 0px; */
 }
 
 .envoyer {
@@ -85,14 +179,19 @@ h1 {
   transition: display 2s ease-in-out;
   animation: fade-in-out 1s linear;
   font-family: 'Bruno Ace SC', cursive;
-
-
-
+  transform: scale(1.125);
 
 }
 
 #send:hover {
-  clip-path: polygon(0 0, 100% 1%, 100% 86%, 0 86%);
+  animation: myAnimation 0.45s forwards;
+}
+
+@keyframes myAnimation {
+  to {
+    clip-path: polygon(0 0, 100% 1%, 100% 86%, 0 86%);
+    transform: scale(1.225);
+  }
 }
 
 .active {
@@ -124,10 +223,27 @@ h1 {
   transform: scale(1.025);
 }
 
-@media (min-width: 768px) {
-  .button-73 {
-    font-size: 1.5rem;
-    padding: .75rem 2rem;
+@media (max-width: 768px) {
+  #send {
+    font-size: 1.2rem;
+    padding: .55rem 1rem;
+  }
+
+  #btn {
+    padding: 10px 30px !important;
+    margin: 20px !important;
+    font-size: 1rem !important;
+  }
+}
+@media (max-width: 568px) {
+  #btn {
+    padding: 10px 15px !important;
+    margin: 10px !important;
+    font-size: 1rem !important;
+  }
+  h1{
+    font-size: 2rem;
+    padding: 0 5px;
   }
 }
 
@@ -138,27 +254,31 @@ h1 {
   grid-template-rows: 50% 20%;
   display: none;
 }
-.our-score{
+
+.our-score {
   font-weight: 900;
   font-size: 4rem;
 }
 
-.replay{
+.replay {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#replay-btn{
-  padding: 20px 20px 22px 10px ;
+
+#replay-btn {
+  padding: 20px 20px 22px 10px;
   clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
   background-image: linear-gradient(to left, #b88da5 0%, #c7eafd 100%);
   border: none;
   scale: 1.5;
   font-weight: 900;
   /* padding-bottom: 1px; */
+  box-shadow: 20px 20px 20px black;
 
 }
-#replay-btn:hover{
+
+#replay-btn:hover {
   scale: 1.7;
   cursor: pointer;
   transition: scale 0.45s ease-in-out;

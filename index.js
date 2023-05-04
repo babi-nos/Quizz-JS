@@ -1,3 +1,15 @@
+const containerPlay = document.querySelector(".container-play");
+const btnPlay = document.querySelector(".btn-play");
+const container = document.querySelector(".container"); // le container du quizz
+
+btnPlay.addEventListener("click", () => {
+  container.style.display = "grid";
+  containerPlay.style.display = "none";
+  title.style.display = "none";
+
+  console.log("vamoss");
+});
+
 function init() {
   const quizz = [
     {
@@ -87,19 +99,21 @@ function init() {
     container.style.display = "grid";
     containerResult.style.display = "none";
     ourScore.innerHTML = "";
+    title.style.display = "none";
+
     btn.forEach((otherBtn) => {
       otherBtn.classList.remove("active");
     });
     init();
-    // btn.classList.remove("active");
   });
 
-  send.addEventListener("click", () => {
+  submit.addEventListener("click", () => {
     if (i === quizz.length - 1) {
       container.style.display = "none";
       containerResult.style.display = "grid";
+      title.style.display = "grid";
 
-      console.log("yess papa jeux de jambree");
+      // console.log("yess papa jeux de jambree");
     }
 
     if (valeur == quizz[i].bonneReponse) {
