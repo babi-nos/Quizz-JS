@@ -6,8 +6,6 @@ btnPlay.addEventListener("click", () => {
   container.style.display = "grid";
   containerPlay.style.display = "none";
   title.style.display = "none";
-
-  console.log("vamoss");
 });
 
 function init() {
@@ -112,17 +110,11 @@ function init() {
       container.style.display = "none";
       containerResult.style.display = "grid";
       title.style.display = "grid";
-
-      // console.log("yess papa jeux de jambree");
     }
 
     if (valeur == quizz[i].bonneReponse) {
       score++;
-      console.log(score);
       ourScore.innerHTML = `Voici votre score: ${score}/${quizz.length}`;
-      console.log(
-        "reeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
-      );
     } else if (score === 0) {
       ourScore.innerHTML = `Voici votre score: 0/${quizz.length}`;
     }

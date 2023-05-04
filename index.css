@@ -10,7 +10,7 @@
 
 body {
   height: 100vh;
-  min-height: 700px;
+  min-height: 500px;
   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 }
 #title {
@@ -24,7 +24,6 @@ body {
   left: 50%;
   transform: translateX(-50%);
   border-bottom: 2px solid gray;
-  /* border-left: 1px solid black; */
 }
 
 /* CONTAINER-PLAY */
@@ -35,11 +34,6 @@ body {
 }
 .container-play h1{
   letter-spacing: 5px;
-  /* background-image: linear-gradient(to bottom, black, rgb(0, 0, 0), rgb(183, 182, 182), rgb(0, 0, 0), rgb(6, 6, 6));
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  color: transparent; */
 }
 
 .container-play button {
@@ -130,15 +124,13 @@ h1 {
   cursor: pointer;
   padding: 20px 50px;
   margin: 50px;
+
   /*css btn*/
   appearance: none;
   background-color: #FFFFFF;
   border-radius: 40em;
   border-style: none;
   box-shadow: #d8eaf8 0 -12px 6px inset;
-  
-  /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); */
-
   box-sizing: border-box;
   color: #000000;
   cursor: pointer;
@@ -234,6 +226,11 @@ h1 {
     margin: 20px !important;
     font-size: 1rem !important;
   }
+  .btn-play {
+    /* padding: 10px 30px !important;
+    margin: 20px !important; */
+    font-size: 2.5rem !important;
+  }
 }
 @media (max-width: 568px) {
   #btn {
@@ -250,7 +247,6 @@ h1 {
 /* container result  */
 .container-result {
   height: 100vh;
-  /* display: grid; */
   grid-template-rows: 50% 20%;
   display: none;
 }
@@ -273,9 +269,7 @@ h1 {
   border: none;
   scale: 1.5;
   font-weight: 900;
-  /* padding-bottom: 1px; */
   box-shadow: 20px 20px 20px black;
-
 }
 
 #replay-btn:hover {
