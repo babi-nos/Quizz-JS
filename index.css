@@ -258,6 +258,9 @@ h1 {
     font-size: 0.9rem !important;
     text-align: left !important;
   }
+  .container-result {
+    grid-template-rows: 50% 30% !important;
+  }
 }
 
 /* container result  */
