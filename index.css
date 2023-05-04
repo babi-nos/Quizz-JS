@@ -31,7 +31,7 @@ body {
 .container-play {
   height: 100vh;
   display: grid;
-  grid-template-rows: 60% 25%;
+  grid-template-rows: 60% 40%;
 }
 
 .container-play h1 {
@@ -242,7 +242,7 @@ h1 {
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 0 5px;
   }
 }
