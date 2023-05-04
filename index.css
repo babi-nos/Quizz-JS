@@ -1,42 +1,165 @@
-*{
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
 }
 
-.container{
-    background-color: pink;
-    text-align: center;
-    height: 100vh;
+body {
+  height: 100vh;
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 }
 
-ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-h1{
-    padding: 25px;
-}
-ul li{
-    padding: 20px;
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 20% 60% 20%;
+  align-items: center;
+  justify-content: center;
 }
 
-span{
-    padding: 10px 20px;
-    border: 2px solid white;
-    background: rgba(255, 255, 255, 0.196);
-    transition: background 0.7 ease-in-out;
-    cursor: pointer;
-   /* position: absolute;  */
+h1 {
+  margin: auto;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 2px;
 }
 
-#btn{
-    margin: 50px;
-    padding: 10px 20px;
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.active{
-    background: green;
-    color: green;
+#btn {
+  cursor: pointer;
+  padding: 20px 50px;
+  margin: 50px;
+  /*css btn*/
+  appearance: none;
+  background-color: #FFFFFF;
+  border-radius: 40em;
+  border-style: none;
+  box-shadow: #ADCFFF 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -.24px;
+  /* margin: 0; */
+  outline: none;
+  padding: 1.3rem 1.6rem;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  /* padding: 0px; */
+}
+
+.envoyer {
+  position: relative;
+}
+
+#send {
+  margin: auto;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 50px;
+  border-radius: 15px;
+  border: none;
+  background-image: linear-gradient(to top, #fed6e3 0%, #adebe8 100%);
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-transform: uppercase;
+  clip-path: polygon(50% 27%, 83% 12%, 100% 43%, 94% 78%, 41% 77%, 62% 78%, 6% 78%, 0% 43%, 17% 12%);
+  transition: display 2s ease-in-out;
+  animation: fade-in-out 1s linear;
+  font-family: 'Bruno Ace SC', cursive;
+
+
+
+
+}
+
+#send:hover {
+  clip-path: polygon(0 0, 100% 1%, 100% 86%, 0 86%);
+}
+
+.active {
+  background-color: #5fff29 !important;
+  box-shadow: #2e353998 0 -6px 8px inset !important;
+  transform: scale(1.125) !important;
+  animation: fade-in-out 1s linear !important;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+#btn:hover {
+  background-color: #5fff29aa;
+  box-shadow: #000000b0 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+
+#btn:active {
+  transform: scale(1.025);
+}
+
+@media (min-width: 768px) {
+  .button-73 {
+    font-size: 1.5rem;
+    padding: .75rem 2rem;
+  }
+}
+
+/* container result  */
+.container-result {
+  height: 100vh;
+  /* display: grid; */
+  grid-template-rows: 50% 20%;
+  display: none;
+}
+.our-score{
+  font-weight: 900;
+  font-size: 4rem;
+}
+
+.replay{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#replay-btn{
+  padding: 20px 20px 22px 10px ;
+  clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+  background-image: linear-gradient(to left, #b88da5 0%, #c7eafd 100%);
+  border: none;
+  scale: 1.5;
+  font-weight: 900;
+  /* padding-bottom: 1px; */
+
+}
+#replay-btn:hover{
+  scale: 1.7;
+  cursor: pointer;
+  transition: scale 0.45s ease-in-out;
 }
