@@ -10,7 +10,7 @@
 
 body {
   height: 100vh;
-  min-height: 500px;
+  min-height: 450px;
   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 }
 #title {
