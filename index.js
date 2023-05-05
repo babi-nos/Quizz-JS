@@ -105,7 +105,7 @@ function init() {
     });
     init();
   });
-  
+
   let valeur;
 
   submit.addEventListener("click", (event) => {
@@ -143,11 +143,10 @@ function init() {
       let qstErro = quizz[i].question;
       // console.log(qstErro);
 
-
       if (!(valeur == quizz[i].bonneReponse)) {
         // console.log("cest tjrs pas ca fdp");
         errorr.innerHTML += `<p> ${qstErro} <span class="red">: Mauvais réponse <p> </span>`;
-      }else if (valeur == quizz[i].bonneReponse){
+      } else if (valeur == quizz[i].bonneReponse) {
         errorr.innerHTML += `<p> ${qstErro} <span class="green">: Bonne réponse <p> </span>`;
       }
 
@@ -163,3 +162,27 @@ function init() {
 }
 
 init(); // appeler la fonction pour démarrer le script
+
+//ANIMATION TITLE ET BTN PLAY
+
+document.querySelector("#title").animate(
+  [
+    // étapes/keyframes
+    { transform: "translateY(0px)" },
+  ],
+  {
+    duration: 1000,
+    fill: "forwards",
+  }
+);
+
+document.querySelector(".center").animate(
+  [
+    // étapes/keyframes
+    { transform: "translateY(0px)" },
+  ],
+  {
+    duration: 1000,
+    fill: "forwards",
+  }
+);

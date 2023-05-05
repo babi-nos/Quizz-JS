@@ -11,7 +11,7 @@
 body {
   height: 100vh;
   /* min-height: 350px; */
-  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  background-image: linear-gradient(to bottom, #a8edea 0%, #000000e8 100%);
   overflow: hidden;
 }
 
@@ -23,8 +23,13 @@ body {
   -moz-background-clip: text;
   background-clip: text;
   color: transparent;
-  left: 50%;
-  transform: translateX(-50%);
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+
+  transform: translateY(-250px);
+  animation: forwards;
+  /* transform: translatey(-2500px); */
+
   /* border-bottom: 2px solid gray; */
 }
 
@@ -37,6 +42,7 @@ body {
 
 .container-play h1 {
   letter-spacing: 5px;
+  animation: fade-in-out 5s;
 }
 
 .container-play button {
@@ -56,21 +62,28 @@ body {
   background-color: #00000000;
   opacity: 1;
   color: #36486b;
+  border-left: 1px solid rgb(75, 255, 15);
+  border-right: 1px solid rgb(255, 15, 15);
+  border-top: 1px solid rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(255, 255, 255);
 
 }
 
 .center {
   margin: auto;
+  transform: translateY(-2500px);
+  animation: forwards;
 }
 
 .btn-play:hover {
   transition: 0.5s ease-in-out;
   background: #8d9db6;
   cursor: pointer;
+
 }
 
 .container-play button {
-  --color1: #36486b;
+  --color1: #596a8e;
   --color2: #bccad6;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
@@ -84,6 +97,8 @@ body {
   color: transparent;
   -webkit-background-clip: text;
   animation: 40s linear 0s infinite move;
+  border: 1px solid white;
+  font-weight: 900;
 }
 
 @keyframes move {
@@ -128,8 +143,8 @@ h1 {
 
   /*css btn*/
   appearance: none;
-  background-color: #FFFFFF;
-  border-radius: 40em;
+  background-color: #ffffff;
+  border-radius: 10em;
   border-style: none;
   box-shadow: #d8eaf8 0 -12px 6px inset;
   box-sizing: border-box;
@@ -163,27 +178,31 @@ h1 {
   padding: 20px 50px;
   border-radius: 15px;
   border: none;
-  background-image: linear-gradient(to top, #fed6e3 0%, #adebe8 100%);
+  /* background-image: linear-gradient(to top, #fed6e3 0%, #adebe8 100%); */
+  background-image: linear-gradient(to bottom, #a8edea 0%, #000000 100%);
   font-size: 1.5rem;
   cursor: pointer;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-transform: uppercase;
-  clip-path: polygon(50% 27%, 83% 12%, 100% 43%, 94% 78%, 41% 77%, 62% 78%, 6% 78%, 0% 43%, 17% 12%);
   transition: display 2s ease-in-out;
   animation: fade-in-out 1s linear;
   font-family: 'Bruno Ace SC', cursive;
   transform: scale(1.125);
-
+  clip-path: polygon(50% 27%, 83% 12%, 100% 43%, 94% 78%, 41% 77%, 62% 78%, 6% 78%, 0% 43%, 17% 12%);
+  
 }
 
 #send:hover {
-  animation: myAnimation 0.45s forwards;
+  animation: myAnimation 0.35s ease forwards;
+  color: rgb(218, 218, 218);
+  font-weight: 900;
 }
 
 @keyframes myAnimation {
   to {
-    clip-path: polygon(0 0, 100% 1%, 100% 86%, 0 86%);
-    transform: scale(1.225);
+    clip-path: polygon(50% 27%, 83% 12%, 100% 83%, 94% 78%, 41% 77%, 62% 78%, 6% 78%, 0% 83%, 17% 12%);
+    /* clip-path: polygon(0 0, 100% 1%, 100% 86%, 0 86%); */
+    /* transform: scale(1.225); */
   }
 }
 
@@ -258,7 +277,7 @@ h1 {
     font-size: 0.9rem !important;
     text-align: left !important;
   }
-  
+
 }
 
 /* container result  */
